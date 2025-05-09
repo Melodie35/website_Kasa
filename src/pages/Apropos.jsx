@@ -1,15 +1,11 @@
-import React from 'react';
-import Header from '@layout/Header';
-import Footer from '@layout/Footer';
+import React from 'react'
 
 const Apropos = () => {
     return (
         <>
-            <Header/>
             <div>
                 A propos
             </div>
-            <Footer/>
         </>
         
     );
