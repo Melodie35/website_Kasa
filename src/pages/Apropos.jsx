@@ -3,7 +3,7 @@ import React from 'react'
 const Apropos = () => {
     return (
         <>
-            <div>
+            <div className='apropos'>
                 A propos
             </div>
         </>

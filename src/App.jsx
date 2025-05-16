@@ -6,12 +6,11 @@ import Footer from '@layout/Footer.jsx'
 
 function App() {  
   return (
-    <>
-      <div>Containeur principal</div>
+    <div className='wrapper'>
         <Header/>
         <Outlet/>
         <Footer/>      
-    </>
+    </div>
   )
 }
 

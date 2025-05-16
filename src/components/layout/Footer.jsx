@@ -2,9 +2,9 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div>
-            Footer
-        </div>
+        <footer>
+            © 2020 Kasa. All rights reserved
+        </footer>
     );
 };
 
