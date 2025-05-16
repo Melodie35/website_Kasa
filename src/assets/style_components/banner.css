@@ -1,0 +1,25 @@
+.banner {
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    position: relative;
+    height: 200px;
+}
+
+.banner img {
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    height: 100%;
+    width: 90%;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    border-radius: 25px;
+}
+
+
+.banner h1 {
+    position: absolute;
+    color: #FFFFFF;
+
+}

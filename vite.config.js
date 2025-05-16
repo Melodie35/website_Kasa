@@ -12,12 +12,16 @@ export default defineConfig({
         replacement: path.resolve(__dirname, 'src')
       },
       {
-        find: '@layout',
-        replacement: path.resolve(__dirname, 'src/components/layout')
+        find: '@components',
+        replacement: path.resolve(__dirname, 'src/components')
       },
       {
         find: '@pages',
         replacement: path.resolve(__dirname, 'src/pages')
+      },
+      {
+        find: '@assets',
+        replacement: path.resolve(__dirname, 'src/assets')
       },
       {
         find: '@utils',

@@ -1,12 +1,19 @@
 import React from 'react'
 
+import Banner from '@components/Banner.jsx'
+
 const Home = () => {
     return (
         <>               
-            <div className="home">
+            <main className="home">
+                <Banner
+                    title="Chez vous, partout et ailleurs"
+                    imageSRC="/images/Banner1.png"
+                />
+                
                 Page d'accueil
-            </div>
-    </>
+            </main>
+        </>
     );
 };
 
