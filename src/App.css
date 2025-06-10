@@ -24,12 +24,18 @@ body {
   display: flex;
   min-width: 320px;
   min-height: 100vh;
+  max-width: 1140px;
 }
 
-/* .App {
+.home {
   display: flex;
   flex-direction: column;
-  min-width: 320px;
-  min-height: 100vh;
-} */
+}
+
+.homeGallery {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #F6F6F6;
+  border-radius: 25px;
+}
 
