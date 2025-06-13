@@ -5,6 +5,7 @@ import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Apropos from '@pages/Apropos.jsx'
 import Home from '@pages/Home.jsx'
+import Logement from '@pages/Logement.jsx'
 import Error from '@utils/Error.jsx'
 
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/Apropos",
         element: <Apropos/>
+      },
+      {
+        path: "/Logement/:lid",
+        element: <Logement/>
       },
       {
         path: "*",

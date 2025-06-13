@@ -1,8 +1,13 @@
+.classLink {
+    width: 30%;
+    margin: 10px;
+}
+
 .galleryArticle {
     display: flex;
 	flex-direction: column;
-    width: 30%;
-    margin: 10px;
+    width: 100%;
+    height: 100%;   
     position: relative;
 }
 
