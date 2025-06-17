@@ -1,0 +1,9 @@
+.homeGallery {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #F6F6F6;
+  border-radius: 25px;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

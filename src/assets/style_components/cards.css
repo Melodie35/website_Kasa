@@ -1,6 +1,6 @@
 .classLink {
     width: 30%;
-    margin: 10px;
+    margin: 15px;
 }
 
 .galleryArticle {
@@ -20,6 +20,9 @@
 
 .galleryArticle h2 {
     position: absolute;
-    z-index: 1;
-
+    margin-block-end: unset;
+    bottom: 5px;
+    color: #FFFFFF;
+    font-size: 18px;
+    margin-inline-start: 10px;
 }

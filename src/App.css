@@ -1,3 +1,12 @@
+body {
+  margin: auto;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  max-width: 1140px;
+  justify-content: center;
+}
+
 #root {
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
@@ -19,23 +28,10 @@ a:hover {
   text-decoration: underline;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  min-width: 320px;
-  min-height: 100vh;
-  max-width: 1140px;
-}
-
-.home {
+.home, .logement, .apropos {
   display: flex;
   flex-direction: column;
+  margin: 30px 50px 20px 50px;
 }
 
-.homeGallery {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #F6F6F6;
-  border-radius: 25px;
-}
 

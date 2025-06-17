@@ -3,6 +3,8 @@ import React, { useEffect, useState, useRef } from 'react';
 import Banner from '@components/Banner.jsx'
 import Cards from '@components/Cards.jsx'
 
+import '@assets/style_pages/home.css'
+
 const Home = () => {
     const [gallery, setGallery] = useState()
     const flag = useRef(false)
@@ -34,13 +36,13 @@ const Home = () => {
                 imageSRC="/images/Banner1.png"
             />
 
-            <section className='homeGallery'>
+            <div className='homeGallery'>
                 {
                     gallery.map(gal => (
                         <Cards key={gal.id} gal={gal}/>
                     ))
                 }
-            </section>    
+            </div>    
             
                
         </div>

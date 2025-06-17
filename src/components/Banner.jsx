@@ -6,6 +6,7 @@ const Banner = ({ title, imageSRC }) => {
     return (
         <div className='banner'>
                 <img src={imageSRC} alt="Bannière"/>
+                <img src="/images/Background.png"/>
                 <h1>{title}</h1>
         </div>   
     );

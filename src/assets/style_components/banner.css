@@ -4,7 +4,7 @@
 	justify-content: center;
 	align-items: center;
     position: relative;
-    height: 200px;
+    height: 150px;
     margin-bottom: 20px;
 }
 
@@ -13,7 +13,7 @@
     object-fit: cover;
     z-index: -1;
     height: 100%;
-    width: 90%;
+    width: 100%;
     box-shadow: 0px 4px 4px 0px #00000040;
     border-radius: 25px;
 }
