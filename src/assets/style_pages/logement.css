@@ -2,7 +2,6 @@
     height: 350px;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .logImage .slider {
@@ -33,4 +32,10 @@ button {
 	right: 50px;
 }
 
-
+.sliderText {
+    position: absolute;
+    align-self: flex-end;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 18px;
+}

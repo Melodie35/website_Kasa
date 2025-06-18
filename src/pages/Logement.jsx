@@ -56,7 +56,8 @@ const Logement = () => {
                     </button>
                     <button onClick={nextImage}>
                         <img className='arrow arrowForward' src="/images/arrow_forward.png" alt="Flèche droite"/>
-                    </button>                
+                    </button>
+                    <p className='sliderText'>{index+1}/{logement.pictures.length}</p>                
                 </div>
                                     
                 <div className='logDetails'>
