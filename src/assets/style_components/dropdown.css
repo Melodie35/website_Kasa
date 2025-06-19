@@ -1,0 +1,26 @@
+.dropTitle {
+    display: flex;
+    justify-content: space-between;
+    background-color:#FF6060;
+    padding: 5px 20px 5px 10px;
+    border-radius: 10px;
+}
+
+.dropTitle h2 {
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: 500ms ease;
+}
+
+.inactive {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: 500ms ease;
+}

@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useParams } from 'react-router';
 
 import '@assets/style_pages/logement.css'
+import Dropdown from '@components/Dropdown';
 
 const Logement = () => {
     const [logement, setLogement] = useState({})
@@ -57,7 +58,7 @@ const Logement = () => {
                     <button onClick={nextImage}>
                         <img className='arrow arrowForward' src="/images/arrow_forward.png" alt="Flèche droite"/>
                     </button>
-                    <p className='sliderText'>{index+1}/{logement.pictures.length}</p>                
+                    <p className='sliderText'>{index+1}/{length}</p>                
                 </div>
                                     
                 <div className='logDetails'>
@@ -78,10 +79,14 @@ const Logement = () => {
             </section>
                                    
             <section className='logSecondSec'>
-                <div>
-                     <h2>Description</h2>
-                     <p>{logement.description}</p>
-                </div>
+                <Dropdown
+                    title="Description"
+                    description={logement.description}
+                />
+                <Dropdown
+                    title="Équipements"
+                    description={logement.equipments}
+                />
                 <div>
                      <h2>Équipements</h2>
                      <p>{logement.equipments}</p>
