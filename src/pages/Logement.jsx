@@ -1,51 +1,59 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 
 import '@assets/style_pages/logement.css'
 import Dropdown from '@components/Dropdown';
 import Rating from '@components/Rating';
+import Error from '@utils/Error';
 
 const Logement = () => {
-    const [logement, setLogement] = useState({})
-    const [index, setIndex] = useState(0)
+    let {lid} = useParams()
+    const navigate = useNavigate()
+    const [logement, setLogement] = useState({})    
     const flag = useRef(false)
     const [isLoad, setLoad] = useState(false)
-    let {lid} = useParams()
+    const [error, setError] = useState(false)
+    const [index, setIndex] = useState(0)
 
-    
-    
+
+    // Appel de l'API avec les détails du logement :   
     useEffect(() => {
         if(flag.current === false){
             fetch(`http://localhost:8080/api/properties/${lid}`)
                 .then((response) => response.json()
                     .then((data) => {
-                        console.log(data)
-                        setLogement(data)
-                        setLoad(true)
+                        if (response.ok) {
+                            setLogement(data) 
+                            setLoad(true)
+                        } else {
+                            navigate('/error')
+                        }
+                        
                 })
-                .catch((error) => console.log(error))
+                .catch((err) => console.log(err))
             )   
         }
             
         return () => flag.current = true
     },[])
-    
+
     if(!isLoad){
         return <div>Chargement...</div>
     }
 
-    
-    const length = logement.pictures.length
+
+
+    //Gestion des slides du Carroussel
+    let length = logement.pictures.length
+
     const prevImage = () => {
         let newIndex = index - 1
         setIndex(newIndex < 0 ? length - 1 : newIndex)
-        console.log("click sur le bouton gauche")
     }
     const nextImage = () => {
         let newIndex = index + 1
         setIndex(newIndex >= length ? 0 : newIndex)
-        console.log("click sur le bouton droite")
-    }
+    } 
 
 
     return (
