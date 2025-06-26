@@ -3,12 +3,23 @@
     justify-content: space-between;
     background-color:#FF6060;
     padding: 5px 20px 5px 10px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .dropTitle h2 {
     color: #FFFFFF;
     font-size: 18px;
+    margin: 0;
+}
+
+button {
+    all: unset;
+}
+
+.dropMenu {
+    background-color: #F3F3F3;
+    padding: 2px 5px 20px 10px;
+    height: 60%;
 }
 
 .active {
@@ -20,7 +31,14 @@
 
 .inactive {
     opacity: 0;
+    position: absolute;
     visibility: hidden;
     transform: translateY(-20px);
     transition: 500ms ease;
+    z-index: -1;
+}
+
+.dropdown ul {
+    list-style: none;
+    padding: 0px;
 }

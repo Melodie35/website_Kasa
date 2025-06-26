@@ -2,16 +2,16 @@ header {
     display: flex;
     justify-content: space-between;
     padding-bottom: 20px;
-    margin: 30px 50px 20px 50px;
+    margin: 30px 50px 10px 50px;
 }
 
-ul {
+header ul {
     list-style: none;
     padding: 0px;
     display: flex;
 }
 
-ul li {
+header ul li {
     display: inline-block;
     margin-right: 20px;    
 }

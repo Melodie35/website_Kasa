@@ -3,6 +3,7 @@ import { useParams } from 'react-router';
 
 import '@assets/style_pages/logement.css'
 import Dropdown from '@components/Dropdown';
+import Rating from '@components/Rating';
 
 const Logement = () => {
     const [logement, setLogement] = useState({})
@@ -60,22 +61,32 @@ const Logement = () => {
                     </button>
                     <p className='sliderText'>{index+1}/{length}</p>                
                 </div>
-                                    
-                <div className='logDetails'>
-                    <div>
-                        <h1>{logement.title}</h1>
-                        <p>{logement.location}</p>
-                    </div>                  
-                    <div className='logTags'>{logement.tags}</div>
+
+                <div className='logSubFirstSec'>                    
+                    <div className='logDetails'>
+                        <div>
+                            <h1>{logement.title}</h1>
+                            <p>{logement.location}</p>
+                        </div>                  
+                        <ul className='logTags'>
+                            {logement.tags.map((item, index) => (
+                                <li key={index}>{item}</li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <div className='logHostRating'>
+                        <div className='logHost'>
+                            <p>{logement.host.name}</p>
+                            <img src={logement.host.picture}/>
+                        </div>
+                        <Rating
+                            rating={logement.rating}
+                        />
+                    </div>
                 </div>
 
-                <div className='logHost'>
-                <div>
-                    <p>{logement.host.name}</p>
-                    <img src={logement.host.picture}/>
-                </div>
-                <div>{logement.rating}</div>
-            </div>
+                
             </section>
                                    
             <section className='logSecondSec'>
@@ -87,10 +98,6 @@ const Logement = () => {
                     title="Équipements"
                     description={logement.equipments}
                 />
-                <div>
-                     <h2>Équipements</h2>
-                     <p>{logement.equipments}</p>
-                </div>
             </section>            
         </article>
     );

@@ -7,7 +7,7 @@ const Dropdown = ({ title, description }) => {
     const [open, setOpen] = useState(false)
 
     return (
-        <div className='Dropdown'>
+        <div className='dropdown'>
             <div className='dropTitle'>
                 <h2>{title}</h2>
                 <button onClick={() => {setOpen(!open)}}>
@@ -16,7 +16,15 @@ const Dropdown = ({ title, description }) => {
             </div>
                             
             <div className={`dropMenu ${open ? 'active' : 'inactive'}`}>
-                <p>{description}</p>
+                {Array.isArray(description) ? (
+                    <ul>
+                        {description.map((item, index) => (
+                            <li key={index}>{item}</li>
+                        ))}
+                    </ul>
+                ) : (
+                    <p>{description}</p>
+                )}
             </div>
         </div>
     );
