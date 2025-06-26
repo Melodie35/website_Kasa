@@ -60,14 +60,20 @@ const Logement = () => {
         <article className='logement' id={logement.id}>
             <section className='logFirstSec'>
                 <div className='logImage'>
+                    {length > 1 && (
+                        <button onClick={prevImage}>
+                            <img className='arrow arrowBack' src="/images/arrow_back.png" alt="Flèche gauche"/>
+                        </button>
+                    )}
+
                     <img className='slider' src={logement.pictures[index]} alt={logement.title}/>
-                    <button onClick={prevImage}>
-                        <img className='arrow arrowBack' src="/images/arrow_back.png" alt="Flèche gauche"/>
-                    </button>
-                    <button onClick={nextImage}>
-                        <img className='arrow arrowForward' src="/images/arrow_forward.png" alt="Flèche droite"/>
-                    </button>
-                    <p className='sliderText'>{index+1}/{length}</p>                
+                    <p className='sliderText'>{index+1}/{length}</p>
+
+                    {length > 1 && (
+                        <button onClick={nextImage}>
+                            <img className='arrow arrowForward' src="/images/arrow_forward.png" alt="Flèche droite"/>
+                        </button>
+                    )}                
                 </div>
 
                 <div className='logSubFirstSec'>                    
