@@ -25,4 +25,21 @@
     color: #FFFFFF;
     font-size: 18px;
     margin-inline-start: 10px;
+    width: 70%;
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .classLink {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .galleryArticle {
+        height: 255px;
+    }
+
+    .galleryArticle h2 {
+        width: 50%;
+    }
 }

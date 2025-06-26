@@ -13,9 +13,28 @@ header ul {
 
 header ul li {
     display: inline-block;
-    margin-right: 20px;    
+    margin-left: 30px;
+    font-weight: 500;
+    size: 24px;
 }
 
 header .active {
     text-decoration: underline;
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    header {
+        padding-bottom: 10px;
+        margin: 20px 10px 10px 10px;
+    }
+    
+    .logoKasa {
+        width: 145px;
+        height: 47px;
+    }
+
+    header ul li {
+        size: 24px;
+    }
 }

@@ -22,5 +22,18 @@
 .banner h1 {
     position: absolute;
     color: #FFFFFF;
+}
 
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .banner {
+        height: 111px;
+        align-items: flex-start;
+    }
+
+    .banner h1 {
+        font-size: 24px;
+        width: 55%;
+        left: 10px;
+    }
 }

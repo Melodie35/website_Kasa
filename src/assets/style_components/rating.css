@@ -7,3 +7,11 @@
 .rating img {
     margin-left: 15px;
 }
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .rating img {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+}

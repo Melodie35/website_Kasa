@@ -1,6 +1,6 @@
 /*Carroussel*/
 .logImage {
-    height: 330px;
+    height: 415px;
     display: flex;
     justify-content: center;
 }
@@ -94,7 +94,7 @@
     border-radius: 50%;
     width: 64px;
     height: 64px;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .logSecondSec {
@@ -108,5 +108,62 @@
     width: 50%;
 }
 
+/* Small devices (phones, less than 768px) */
+/*Carroussel*/
+@media (max-width: 767.98px) {
+    .logImage {
+        height: 255px;
+    }
 
+    .logImage .arrow {
+        width: 24px;
+        height: 24px;
+    }
 
+    .logImage .arrowBack {
+	    left: 10px;
+    }
+    .logImage .arrowForward {
+	    right: 10px;
+    }
+
+    .sliderText {
+        display: none;
+    }
+}
+
+/* Small devices (phones, less than 768px) */
+/*Description*/
+@media (max-width: 767.98px) {
+    .logSubFirstSec {
+        flex-wrap: wrap;
+    }
+
+    .logDetails h1 {
+        font-size: 18px;
+    }
+    .logDetails p {
+        font-size: 14px;
+        padding-top: 10px;
+    }
+
+    .logTags li {
+        min-width: 84px;
+        font-size: 10px;
+    }
+
+    .logHostRating {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .logSecondSec {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .logSecondSec .dropdown {
+    width: 100%;
+}
+}

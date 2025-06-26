@@ -16,9 +16,35 @@
     color:#FF6060;
 }
 
+.error br {
+    display: none;
+}
+
 .homeLink {
     display: inline-block;
     margin: 100px 0;
     font-size: 18px;
     text-decoration: underline;
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .error h1 {
+        font-size: 96px;
+        padding-top: 50px;
+    }
+
+    .error p {
+        font-size: 18px;
+        padding-top: 80px;
+    }
+
+    .error br {
+        display: inline;
+    }
+
+    .homeLink {
+        font-size: 14px;
+    }
+
 }

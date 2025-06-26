@@ -6,7 +6,7 @@ import '@assets/style_components/header.css'
 const Header = () => {
     return (
         <header>
-            <img src="/images/LOGO.png" alt="Logo KASA"/>
+            <img src="/images/LOGO.png" className="logoKasa" alt="Logo KASA"/>
             <nav>
                 <ul>
                     <li ><NavLink 
