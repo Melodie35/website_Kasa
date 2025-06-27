@@ -18,8 +18,13 @@ header ul li {
     size: 24px;
 }
 
+header a:hover {
+    text-underline-offset: 4px;
+}
+
 header .active {
     text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 /* Small devices (phones, less than 768px) */

@@ -3,6 +3,7 @@
     height: 415px;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 .logImage .slider {
     width: 100%;
@@ -13,17 +14,15 @@
 
 .logement button {
     all: unset;
+    cursor: pointer;
 }
 
 .logImage .arrow {
 	position: absolute;
-    z-index: 2;
 }
-.logImage .arrowBack {
-	left: 50px;
-}
+
 .logImage .arrowForward {
-	right: 50px;
+	right: 0.5%;
 }
 
 .sliderText {
