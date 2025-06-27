@@ -39,7 +39,7 @@ button {
     transition: 200ms ease;    
 }
 
-.dropdown ul {
+.collapse ul {
     list-style: none;
     padding: 0px;
 }

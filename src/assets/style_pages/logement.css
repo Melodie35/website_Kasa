@@ -103,7 +103,7 @@
     justify-content: space-between;
 }
 
-.logSecondSec .dropdown {
+.logSecondSec .collapse {
     width: 50%;
 }
 
@@ -162,7 +162,7 @@
         flex-wrap: wrap;
         gap: 20px;
     }
-    .logSecondSec .dropdown {
+    .logSecondSec .collapse {
     width: 100%;
 }
 }

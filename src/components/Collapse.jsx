@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-import '@assets/style_components/dropdown.css'
+import '@assets/style_components/collapse.css'
 
 
-const Dropdown = ({ title, description }) => {
+const Collapse = ({ title, description }) => {
     const [open, setOpen] = useState(false)
 
     return (
-        <div className='dropdown'>
+        <div className='collapse'>
             <div className='dropTitle'>
                 <h2>{title}</h2>
                 <button onClick={() => {setOpen(!open)}}>
@@ -30,4 +30,4 @@ const Dropdown = ({ title, description }) => {
     );
 };
 
-export default Dropdown;
+export default Collapse;

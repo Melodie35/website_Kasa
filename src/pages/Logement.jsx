@@ -2,9 +2,8 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate, useParams } from 'react-router';
 
 import '@assets/style_pages/logement.css'
-import Dropdown from '@components/Dropdown';
+import Collapse from '@components/Collapse';
 import Rating from '@components/Rating';
-import Error from '@utils/Error';
 
 const Logement = () => {
     let {lid} = useParams()
@@ -104,11 +103,11 @@ const Logement = () => {
             </section>
                                    
             <section className='logSecondSec'>
-                <Dropdown
+                <Collapse
                     title="Description"
                     description={logement.description}
                 />
-                <Dropdown
+                <Collapse
                     title="Équipements"
                     description={logement.equipments}
                 />
