@@ -14,15 +14,13 @@ const Home = () => {
     useEffect(() => {
         if(flag.current === false){
             logementService.getAllLogement()
-                .then(response => {
-                    console.log(response)
-                })
-                    // .then((data) => {
-                    //     setGallery(data)
-                    //     setLoad(true)
-                    // })
+                .then((response) => response.json()
+                    .then((data) => {
+                        setGallery(data)
+                        setLoad(true)
+                    })
                     .catch((error) => console.log(error))
-                // )   
+                )   
             }
         
         return () => flag.current = true
@@ -33,23 +31,20 @@ const Home = () => {
     }
 
     return (
-        <div>Home</div>
-        // <div className="home">
-        //     <Banner
-        //         title="Chez vous, partout et ailleurs"
-        //         imageSRC="/images/Banner1.png"
-        //     />
+        <div className="home">
+            <Banner
+                title="Chez vous, partout et ailleurs"
+                imageSRC="/images/Banner1.png"
+            />
 
-        //     <div className='homeGallery'>
-        //         {
-        //             gallery.map(gal => (
-        //                 <Cards key={gal.id} gal={gal}/>
-        //             ))
-        //         }
-        //     </div>    
-            
-               
-        // </div>
+            <div className='homeGallery'>
+                {
+                    gallery.map(gal => (
+                        <Cards key={gal.id} gal={gal}/>
+                    ))
+                }
+            </div>     
+        </div>
     )
 }
 

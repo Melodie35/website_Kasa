@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate, useParams } from 'react-router';
 
 import '@assets/style_pages/logement.css'
+import { logementService } from '@services/logement.service'
 import Gallery from '@components/Gallery';
 import Collapse from '@components/Collapse';
 import Rating from '@components/Rating';
@@ -16,7 +17,7 @@ const Logement = () => {
     // Appel de l'API avec les détails du logement :   
     useEffect(() => {
         if(flag.current === false){
-            fetch(`http://localhost:8080/api/properties/${lid}`)
+            logementService.getLogement(lid)
                 .then((response) => response.json()
                     .then((data) => {
                         if (response.ok) {
