@@ -1,0 +1,58 @@
+/*Carroussel*/
+.gallery {
+    height: 415px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.gallery .slider {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.logement button {
+    all: unset;
+    cursor: pointer;
+}
+
+.gallery .arrow {
+	position: absolute;
+}
+
+.gallery .arrowForward {
+	right: 0.5%;
+}
+
+.sliderText {
+    position: absolute;
+    align-self: flex-end;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+/* Small devices (phones, less than 768px) */
+/*Carroussel*/
+@media (max-width: 767.98px) {
+    .gallery {
+        height: 255px;
+    }
+
+    .gallery .arrow {
+        width: 24px;
+        height: 24px;
+    }
+
+    .gallery .arrowBack {
+	    left: 10px;
+    }
+    .gallery .arrowForward {
+	    right: 10px;
+    }
+
+    .sliderText {
+        display: none;
+    }
+}

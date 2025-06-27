@@ -1,39 +1,3 @@
-/*Carroussel*/
-.logImage {
-    height: 415px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-.logImage .slider {
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    object-fit: cover;
-}
-
-.logement button {
-    all: unset;
-    cursor: pointer;
-}
-
-.logImage .arrow {
-	position: absolute;
-}
-
-.logImage .arrowForward {
-	right: 0.5%;
-}
-
-.sliderText {
-    position: absolute;
-    align-self: flex-end;
-    color: #FFFFFF;
-    font-weight: 500;
-    font-size: 18px;
-}
-
-
 /*Description*/
 .logSubFirstSec {
     display: flex;
@@ -107,29 +71,6 @@
     width: 50%;
 }
 
-/* Small devices (phones, less than 768px) */
-/*Carroussel*/
-@media (max-width: 767.98px) {
-    .logImage {
-        height: 255px;
-    }
-
-    .logImage .arrow {
-        width: 24px;
-        height: 24px;
-    }
-
-    .logImage .arrowBack {
-	    left: 10px;
-    }
-    .logImage .arrowForward {
-	    right: 10px;
-    }
-
-    .sliderText {
-        display: none;
-    }
-}
 
 /* Small devices (phones, less than 768px) */
 /*Description*/

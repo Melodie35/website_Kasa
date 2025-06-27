@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate, useParams } from 'react-router';
 
 import '@assets/style_pages/logement.css'
+import Gallery from '@components/Gallery';
 import Collapse from '@components/Collapse';
 import Rating from '@components/Rating';
 
@@ -11,10 +12,7 @@ const Logement = () => {
     const [logement, setLogement] = useState({})    
     const flag = useRef(false)
     const [isLoad, setLoad] = useState(false)
-    const [error, setError] = useState(false)
-    const [index, setIndex] = useState(0)
-
-
+    
     // Appel de l'API avec les détails du logement :   
     useEffect(() => {
         if(flag.current === false){
@@ -41,39 +39,13 @@ const Logement = () => {
     }
 
 
-
-    //Gestion des slides du Carroussel
-    let length = logement.pictures.length
-
-    const prevImage = () => {
-        let newIndex = index - 1
-        setIndex(newIndex < 0 ? length - 1 : newIndex)
-    }
-    const nextImage = () => {
-        let newIndex = index + 1
-        setIndex(newIndex >= length ? 0 : newIndex)
-    } 
-
-
     return (
         <article className='logement' id={logement.id}>
             <section className='logFirstSec'>
-                <div className='logImage'>
-                    {length > 1 && (
-                        <button onClick={prevImage}>
-                            <img className='arrow arrowBack' src="/images/arrow_back.png" alt="Flèche gauche"/>
-                        </button>
-                    )}
-
-                    <img className='slider' src={logement.pictures[index]} alt={logement.title}/>
-                    <p className='sliderText'>{index+1}/{length}</p>
-
-                    {length > 1 && (
-                        <button onClick={nextImage}>
-                            <img className='arrow arrowForward' src="/images/arrow_forward.png" alt="Flèche droite"/>
-                        </button>
-                    )}                
-                </div>
+                <Gallery
+                    images = {logement.pictures}
+                    altTitles = {logement.title}
+                />
 
                 <div className='logSubFirstSec'>                    
                     <div className='logDetails'>
@@ -97,9 +69,7 @@ const Logement = () => {
                             rating={logement.rating}
                         />
                     </div>
-                </div>
-
-                
+                </div>                
             </section>
                                    
             <section className='logSecondSec'>
