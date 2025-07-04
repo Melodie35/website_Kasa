@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1751626508579" clover="3.2.0">
+  <project timestamp="1751626508579" name="All files">
+    <metrics statements="10" coveredstatements="6" conditionals="10" coveredconditionals="6" methods="3" coveredmethods="1" elements="23" coveredelements="13" complexity="0" loc="10" ncloc="10" packages="1" files="1" classes="1"/>
+    <file name="Gallery.jsx" path="C:\Users\MMI25138\OneDrive - OPEN\Documents\Perso\Openclassrooms\Projet_8\my-react-app\src\components\Gallery.jsx">
+      <metrics statements="10" coveredstatements="6" conditionals="10" coveredconditionals="6" methods="3" coveredmethods="1"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="12" count="0" type="stmt"/>
+      <line num="13" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="16" count="0" type="stmt"/>
+      <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="20" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

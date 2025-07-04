@@ -6,6 +6,6 @@ import Banner from '@components/Banner.jsx'
 
 describe('Banner',() => {
     test('Should render without crash', () => {
-        render(<Banner/>);
+        render(<Banner />);
     })
 })
