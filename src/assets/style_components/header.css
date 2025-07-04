@@ -41,5 +41,6 @@ header .active {
 
     header ul li {
         size: 24px;
+        text-transform: uppercase;
     }
 }
