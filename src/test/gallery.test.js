@@ -69,4 +69,26 @@ describe('Gallery',() => {
         expect(imageElement).toHaveAttribute('src', images[2])
     })
 
+    test('does display arrows when there is more than one image', () => {
+        render(<Gallery images={images} />)
+
+        const leftButton = screen.getByAltText(/Flèche gauche/i)
+        const rightButton = screen.getByAltText(/Flèche droite/i)
+
+        expect(leftButton).toBeInTheDocument()
+        expect(rightButton).toBeInTheDocument()
+    })
+
+    test('does not display arrows when there is only one image', () => {
+        let images = [
+        'https://unsplash.com/fr/photos/arbres-avec-brouillard-wmFTP3vbYKU',
+        ]
+        render(<Gallery images={images} />)
+
+        const leftButton = screen.queryByAltText(/Flèche gauche/i)
+        const rightButton = screen.queryByAltText(/Flèche droite/i)
+
+        expect(leftButton).toBeNull()
+        expect(rightButton).toBeNull()
+    })
 })

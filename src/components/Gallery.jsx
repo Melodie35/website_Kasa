@@ -25,11 +25,8 @@ const Gallery = ({ images, altTitle } ) => {
                 </button>
             )}
 
-            <img className='slider' data-testid='slider' src={images[index]} alt={altTitle}/>
-            
-            {length > 1 && (
-                <p className='sliderText'>{index+1}/{length}</p>
-            )}                
+            <img className='slider' data-testid='slider' src={images[index]} alt={altTitle}/>            
+            <p className='sliderText'>{index+1}/{length}</p>
 
             {length > 1 && (
                 <button onClick={nextImage}>
