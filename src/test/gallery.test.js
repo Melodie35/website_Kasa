@@ -11,11 +11,62 @@ describe('Gallery',() => {
     ]
 
     test('displays the first image on initial render', () => {
-        render(<Gallery images={images} />);
+        render(<Gallery images={images} />)
 
         const imageElement = screen.getByTestId('slider')
         expect(imageElement).toHaveAttribute('src', images[0])
     })
 
+    test('displays the next image when clicking the right arrow', () => {
+        render(<Gallery images={images} />)
+
+        const rightButton = screen.getByAltText(/Flèche droite/i)
+        const imageElement = screen.getByTestId('slider')
+
+        fireEvent.click(rightButton)
+        expect(imageElement).toHaveAttribute('src', images[1])
+    })
+
+    test('displays the previous image when clicking the left arrow', () => {
+        render(<Gallery images={images} />)
+
+        const rightButton = screen.getByAltText(/Flèche droite/i)
+        const leftButton = screen.getByAltText(/Flèche gauche/i)
+        const imageElement = screen.getByTestId('slider')
+
+        fireEvent.click(rightButton)
+        fireEvent.click(leftButton)
+        expect(imageElement).toHaveAttribute('src', images[0])
+    })
+
+    test('displays the first image after the last one when clicking the right arrow', () => {
+        render(<Gallery images={images} />)
+
+        const rightButton = screen.getByAltText(/Flèche droite/i)
+        const imageElement = screen.getByTestId('slider')
+
+        fireEvent.click(rightButton)
+        fireEvent.click(rightButton)
+        expect(imageElement).toHaveAttribute('src', images[2])
+
+        fireEvent.click(rightButton)
+        expect(imageElement).toHaveAttribute('src', images[0])
+    })
+
+    test('displays the last image after the first one was reached when clicking the left arrow', () => {
+        render(<Gallery images={images} />)
+
+        const leftButton = screen.getByAltText(/Flèche gauche/i)
+        const rightButton = screen.getByAltText(/Flèche droite/i)
+        const imageElement = screen.getByTestId('slider')
+
+        fireEvent.click(rightButton)
+        fireEvent.click(rightButton)
+        fireEvent.click(rightButton)
+        expect(imageElement).toHaveAttribute('src', images[0])
+
+        fireEvent.click(leftButton)
+        expect(imageElement).toHaveAttribute('src', images[2])
+    })
 
 })
