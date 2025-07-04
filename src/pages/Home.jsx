@@ -1,5 +1,6 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react'
 
+import { logementService } from '@services/logement.service'
 import Banner from '@components/Banner.jsx'
 import Cards from '@components/Cards.jsx'
 
@@ -12,7 +13,7 @@ const Home = () => {
 
     useEffect(() => {
         if(flag.current === false){
-            fetch(`http://localhost:8080/api/properties`)
+            logementService.getAllLogement()
                 .then((response) => response.json()
                     .then((data) => {
                         setGallery(data)
@@ -42,9 +43,7 @@ const Home = () => {
                         <Cards key={gal.id} gal={gal}/>
                     ))
                 }
-            </div>    
-            
-               
+            </div>     
         </div>
     )
 }
