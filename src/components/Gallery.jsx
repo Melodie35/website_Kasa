@@ -25,7 +25,7 @@ const Gallery = ({ images, altTitle } ) => {
                 </button>
             )}
 
-            <img className='slider' src={images[index]} alt={altTitle}/>
+            <img className='slider' data-testid='slider' src={images[index]} alt={altTitle}/>            
             <p className='sliderText'>{index+1}/{length}</p>
 
             {length > 1 && (
